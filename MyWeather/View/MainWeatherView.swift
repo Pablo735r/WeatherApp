@@ -122,17 +122,14 @@ struct MainWeatherView_Previews: PreviewProvider {
 }
 
 extension Image {
-   
     func imageModifier() -> some View {
         self .resizable()
             .scaledToFit()
-           
-        
     }
-    // This extension and the Function applies for the Icon that is show before the image is loaded
+  
     func iconModifier() -> some View {
         self
-            .imageModifier() // We call the func above to apply the 2 modifiers .resizable(),.scaledToFit()
+            .imageModifier() 
             .frame(maxWidth: 60)
             .foregroundColor(.purple)
             .opacity(0.5)
